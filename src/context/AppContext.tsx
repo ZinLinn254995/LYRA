@@ -17,7 +17,15 @@ interface AppContextType {
   setIsCreateModalOpen: (open: boolean) => void;
   setIsSettingsOpen: (open: boolean) => void;
   setActiveSongId: (id: string | null) => void;
-  createSong: (title: string, musicalKey?: string) => Song;
+  createSong: (details: {
+    title: string;
+    composer?: string;
+    artist?: string;
+    jianpuReference: string;
+    songKey?: string;
+    timeSignature: string;
+    tempo: number;
+  }) => Song;
   deleteSong: (id: string) => void;
   updateSong: (id: string, updates: Partial<Song>) => void;
   t: (key: TranslationKey) => string;
@@ -110,17 +118,29 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
     setLanguageState((prev) => (prev === 'en' ? 'my' : 'en'));
   };
 
-  const createSong = (title: string, musicalKey?: string): Song => {
-    const trimmedTitle = title.trim();
-    const finalTitle = trimmedTitle || translations[language].defaultTitle;
+  const createSong = (details: {
+    title: string;
+    composer?: string;
+    artist?: string;
+    jianpuReference: string;
+    songKey?: string;
+    timeSignature: string;
+    tempo: number;
+  }): Song => {
     const now = new Date().toISOString();
-    
     const newSong: Song = {
       id: 'song_' + Date.now() + '_' + Math.random().toString(36).substring(2, 7),
-      title: finalTitle,
+      title: details.title.trim() || translations[language].defaultTitle,
+      composer: details.composer?.trim() || undefined,
+      artist: details.artist?.trim() || undefined,
+      jianpuReference: details.jianpuReference,
+      songKey: details.songKey?.trim() || undefined,
+      key: details.songKey?.trim() || undefined,
+      timeSignature: details.timeSignature,
+      tempo: details.tempo,
+      bars: [{ id: `bar_${Date.now()}`, timeSignature: details.timeSignature, notes: [] }],
       updatedAt: now,
       createdAt: now,
-      key: musicalKey?.trim() ? musicalKey.trim() : undefined,
     };
 
     setSongs((prev) => [newSong, ...prev]);
