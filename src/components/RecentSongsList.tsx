@@ -33,7 +33,7 @@ export const RecentSongsList: React.FC = () => {
         </span>
       </div>
 
-      <div className="divide-y divide-neutral-200/80 dark:divide-neutral-800/80 rounded-xl border border-neutral-200/80 dark:border-neutral-800/80 bg-white/70 dark:bg-neutral-900/60 overflow-hidden shadow-xs">
+      <div className="lyra-panel divide-y overflow-hidden">
         {songs.map((song) => {
           const relativeDate = formatRelativeDate(song.updatedAt, language);
 

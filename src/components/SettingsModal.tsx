@@ -20,11 +20,11 @@ export const SettingsModal: React.FC = () => {
       role="dialog"
       aria-modal="true"
       aria-labelledby="settings-modal-title"
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-xs"
+      className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-black/50 backdrop-blur-xs"
       onClick={() => setIsSettingsOpen(false)}
     >
       <div
-        className="w-full max-w-md rounded-2xl bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 p-5 sm:p-6 shadow-2xl"
+        className="lyra-panel w-full max-w-md max-h-[calc(100dvh-2rem)] overflow-y-auto p-5 sm:p-6"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}

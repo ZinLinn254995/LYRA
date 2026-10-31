@@ -16,8 +16,8 @@ export const Header: React.FC = () => {
   } = useApp();
 
   return (
-    <header className="sticky top-0 z-30 w-full bg-neutral-50/90 dark:bg-neutral-950/90 backdrop-blur-md border-b border-neutral-200/80 dark:border-neutral-800/80 transition-colors">
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-4">
+    <header className="lyra-header sticky top-0 z-30 w-full border-b backdrop-blur-md transition-colors">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 min-h-16 py-2 flex items-center justify-between gap-3">
         {/* Brand Zone */}
         <button
           type="button"

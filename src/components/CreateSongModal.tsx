@@ -41,7 +41,7 @@ export const CreateSongModal: React.FC = () => {
       onClick={() => setIsCreateModalOpen(false)}
     >
       <div
-        className="w-full max-w-md rounded-2xl bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 p-5 sm:p-6 shadow-2xl"
+        className="lyra-panel w-full max-w-md max-h-[calc(100dvh-2rem)] overflow-y-auto p-5 sm:p-6"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="flex items-center justify-between pb-3 border-b border-neutral-100 dark:border-neutral-800/80">
@@ -76,7 +76,7 @@ export const CreateSongModal: React.FC = () => {
               value={title}
               onChange={(e) => setTitle(e.target.value)}
               placeholder={t('defaultTitle')}
-              className="w-full px-3.5 py-2.5 rounded-xl border border-neutral-300 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800/60 text-neutral-900 dark:text-neutral-100 text-sm focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all placeholder:text-neutral-400"
+              className="lyra-input text-sm transition-all"
             />
           </div>
 

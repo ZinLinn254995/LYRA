@@ -31,13 +31,13 @@ export const SongViewPlaceholder: React.FC = () => {
   const relativeDate = formatRelativeDate(activeSong.updatedAt, language);
 
   return (
-    <div className="w-full max-w-3xl mx-auto px-4 sm:px-6 py-6 animate-fadeIn">
+    <div className="w-full max-w-3xl mx-auto px-4 sm:px-6 py-5 sm:py-8 animate-fadeIn">
       {/* Navigation back bar */}
       <div className="flex items-center justify-between pb-6 border-b border-neutral-200/80 dark:border-neutral-800/80">
         <button
           type="button"
           onClick={() => setActiveSongId(null)}
-          className="inline-flex items-center gap-2 px-3 py-2 -ml-3 rounded-lg text-sm font-medium text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 hover:bg-neutral-100 dark:hover:bg-neutral-800/60 transition-colors cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500"
+          className="lyra-button-secondary inline-flex items-center gap-2 px-3 py-2 -ml-2 text-sm font-medium transition-colors cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>{t('backToHome')}</span>
@@ -46,7 +46,7 @@ export const SongViewPlaceholder: React.FC = () => {
         <button
           type="button"
           onClick={handleDelete}
-          className="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg text-xs font-medium text-red-600 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-950/30 transition-colors cursor-pointer"
+          className="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg text-xs font-medium text-red-600 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-950/30 transition-colors cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-500"
           title={t('deleteSong')}
         >
           <Trash2 className="w-3.5 h-3.5" />
@@ -69,7 +69,7 @@ export const SongViewPlaceholder: React.FC = () => {
                     if (e.key === 'Enter') handleSaveRename();
                     if (e.key === 'Escape') setIsEditingTitle(false);
                   }}
-                  className="w-full px-3 py-1.5 rounded-lg border border-amber-500 bg-white dark:bg-neutral-900 text-lg font-bold text-neutral-900 dark:text-neutral-100 focus:outline-none"
+                  className="lyra-input w-full px-3 py-1.5 text-lg font-bold"
                 />
                 <button
                   type="button"
@@ -114,7 +114,7 @@ export const SongViewPlaceholder: React.FC = () => {
       </div>
 
       {/* Clean Next-Step Placeholder Studio Workspace */}
-      <div className="p-8 sm:p-12 rounded-2xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900/60 text-center shadow-xs">
+      <div className="lyra-panel p-6 sm:p-12 text-center">
         <div className="w-12 h-12 mx-auto rounded-xl bg-amber-500/10 text-amber-600 dark:text-amber-400 flex items-center justify-center mb-4">
           <Music className="w-6 h-6" />
         </div>
