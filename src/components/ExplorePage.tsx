@@ -50,7 +50,7 @@ const samples: SampleSong[] = [
 ];
 
 export const ExplorePage: React.FC<{ onBack: () => void }> = ({ onBack }) => {
-  const { language, t, createSong, updateSong, setActiveSongId } = useApp();
+  const { language, createSong, updateSong } = useApp();
   const [selected, setSelected] = useState<SampleSong | null>(null);
   const [copiedId, setCopiedId] = useState<string | null>(null);
   const my = language === 'my';
