@@ -97,17 +97,17 @@ export const SongViewPlaceholder: React.FC = () => {
 
             {/* Song Clean Metadata */}
             <div className="flex items-center flex-wrap gap-2 text-xs sm:text-sm text-neutral-500 dark:text-neutral-400 mt-2">
-              {activeSong.key && (
+              {(activeSong.songKey || activeSong.key) && (
                 <>
                   <span className="font-mono font-medium text-amber-600 dark:text-amber-400">
-                    {t('keyLabel')}: {activeSong.key}
+                    {t('keyLabel')}: {activeSong.songKey || activeSong.key}
                   </span>
                   <span aria-hidden="true">·</span>
                 </>
               )}
-              <span>
-                {t('lastEdited')} {relativeDate}
-              </span>
+              <span>{activeSong.timeSignature || '4/4'} · {activeSong.tempo || 100} BPM</span>
+              <span aria-hidden="true">·</span>
+              <span>{t('lastEdited')} {relativeDate}</span>
             </div>
           </div>
         </div>

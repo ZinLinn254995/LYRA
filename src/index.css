@@ -86,4 +86,12 @@
   .lyra-input { width: 100%; border: 1px solid var(--lyra-border); border-radius: .7rem; background: var(--lyra-surface-subtle); color: var(--lyra-text); padding: .7rem .85rem; }
   .lyra-input::placeholder { color: var(--lyra-muted); }
   .lyra-input:focus { border-color: #c47b2b; box-shadow: 0 0 0 3px rgb(196 123 43 / .16); outline: none; }
+  .lyra-label { color: var(--lyra-text); font-size: .78rem; font-weight: 650; letter-spacing: .01em; }
+  .lyra-optional { color: var(--lyra-muted); font-size: .7rem; font-weight: 500; }
+  .lyra-section-label { color: var(--lyra-muted); font-size: .7rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+  select.lyra-input { appearance: auto; }
+  @media (max-width: 640px) {
+    .lyra-panel { border-radius: .85rem; }
+    .lyra-input { min-height: 2.75rem; }
+  }
 }
