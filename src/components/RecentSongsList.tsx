@@ -1,21 +1,26 @@
 import React, { useState } from 'react';
-import { ChevronRight, Trash2, Music } from 'lucide-react';
+import { ChevronRight, Trash2, Music, Compass } from 'lucide-react';
 import { useApp } from '../context/AppContext';
 import { EmptyState } from './EmptyState';
 import { formatRelativeDate } from '../utils/date';
 import { Song } from '../types';
 
-export const RecentSongsList: React.FC = () => {
+export const RecentSongsList: React.FC<{ onExplore: () => void }> = ({ onExplore }) => {
   const { songs, language, setActiveSongId, deleteSong, t } = useApp();
   const [songToDelete, setSongToDelete] = useState<Song | null>(null);
 
   if (songs.length === 0) {
     return (
       <section className="pt-2 pb-12">
-        <div className="flex items-center justify-between mb-3">
-          <h2 className="text-sm font-semibold uppercase tracking-wider text-neutral-500 dark:text-neutral-400">
+        <div className="flex items-center justify-between gap-3 mb-3 px-1">
+          <h2 className="text-xs sm:text-sm font-semibold uppercase tracking-wider text-neutral-500 dark:text-neutral-400">
             {t('recentSongs')}
           </h2>
+          <button type="button" onClick={onExplore} className="inline-flex items-center gap-1.5 text-xs font-medium text-neutral-500 hover:text-amber-700 dark:text-neutral-400 dark:hover:text-amber-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 rounded-md px-1.5 py-1">
+            <Compass className="w-3.5 h-3.5" />
+            <span>{t('exploreLabel')}</span>
+            <ChevronRight className="w-3 h-3" />
+          </button>
         </div>
         <EmptyState />
       </section>
@@ -28,9 +33,14 @@ export const RecentSongsList: React.FC = () => {
         <h2 className="text-xs sm:text-sm font-semibold uppercase tracking-wider text-neutral-500 dark:text-neutral-400">
           {t('recentSongs')}
         </h2>
-        <span className="text-xs text-neutral-600 dark:text-neutral-400 font-mono tabular-nums">
-          {songs.length}
-        </span>
+        <div className="flex items-center gap-3">
+          <button type="button" onClick={onExplore} className="inline-flex items-center gap-1.5 text-xs font-medium text-neutral-500 hover:text-amber-700 dark:text-neutral-400 dark:hover:text-amber-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 rounded-md px-1.5 py-1">
+            <Compass className="w-3.5 h-3.5" />
+            <span>{t('exploreLabel')}</span>
+            <ChevronRight className="w-3 h-3" />
+          </button>
+          <span className="text-xs text-neutral-600 dark:text-neutral-400 font-mono tabular-nums">{songs.length}</span>
+        </div>
       </div>
 
       <div className="lyra-panel divide-y overflow-hidden">

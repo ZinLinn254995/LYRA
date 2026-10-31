@@ -12,6 +12,7 @@ export const translations = {
     
     // Actions
     createSong: 'Create New Song',
+    exploreLabel: 'Explore',
     createFirstSong: 'Create First Song',
     openSong: 'Open',
     deleteSong: 'Delete',
@@ -101,6 +102,7 @@ export const translations = {
     
     // Actions
     createSong: 'သီချင်းအသစ် ဖန်တီးမည်',
+    exploreLabel: 'နမူနာသီချင်းများ',
     createFirstSong: 'ပထမဆုံး သီချင်း ဖန်တီးမည်',
     openSong: 'ဖွင့်မည်',
     deleteSong: 'ဖျက်မည်',

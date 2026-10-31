@@ -100,3 +100,81 @@
     .lyra-input { min-height: 2.75rem; }
   }
 }
+
+
+/* Compact Jianpu sample-sheet layout */
+.sheet-score {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  column-gap: 0;
+  row-gap: .7rem;
+  align-items: stretch;
+}
+.sheet-bar {
+  position: relative;
+  min-width: 0;
+  min-height: 5.1rem;
+  padding: .65rem .45rem .4rem;
+  border-right: 1px solid var(--lyra-border);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: .3rem;
+}
+.sheet-bar:nth-child(4n) { border-right: 0; }
+.sheet-bar-number {
+  position: absolute;
+  top: .12rem;
+  right: .3rem;
+  color: var(--lyra-muted);
+  font-size: .58rem;
+  line-height: 1;
+}
+.sheet-section {
+  color: var(--lyra-muted);
+  font-size: .58rem;
+  font-weight: 700;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+.sheet-chord {
+  color: #b7792e;
+  font-size: .72rem;
+  font-weight: 700;
+  line-height: 1.1;
+  min-height: .8rem;
+}
+.sheet-notes {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: .1rem;
+  color: var(--lyra-text);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: clamp(.78rem, 2vw, 1.05rem);
+  font-weight: 650;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+.sheet-lyric {
+  display: flex;
+  justify-content: space-around;
+  gap: .1rem;
+  color: var(--lyra-muted);
+  font-size: .58rem;
+  line-height: 1.25;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.sheet-lyric span { min-width: 0; overflow: hidden; text-overflow: clip; }
+@media (min-width: 700px) {
+  .sheet-score { grid-template-columns: repeat(8, minmax(0, 1fr)); row-gap: .85rem; }
+  .sheet-bar { min-height: 5.5rem; }
+  .sheet-bar:nth-child(4n) { border-right: 1px solid var(--lyra-border); }
+  .sheet-bar:nth-child(8n) { border-right: 0; }
+}
+@media (max-width: 380px) {
+  .sheet-score { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .sheet-bar:nth-child(4n) { border-right: 1px solid var(--lyra-border); }
+  .sheet-bar:nth-child(3n) { border-right: 0; }
+}
