@@ -24,7 +24,7 @@ export const SettingsModal: React.FC = () => {
       onClick={() => setIsSettingsOpen(false)}
     >
       <div
-        className="w-full max-w-md rounded-2xl bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 p-5 sm:p-6 shadow-2xl"
+        className="lyra-panel w-full max-w-md max-h-[calc(100dvh-2rem)] overflow-y-auto p-5 sm:p-6"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}

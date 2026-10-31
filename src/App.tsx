@@ -17,12 +17,12 @@ const HomeScreen: React.FC = () => {
   const { activeSongId } = useApp();
 
   return (
-    <div className="min-h-screen bg-neutral-50 dark:bg-neutral-950 text-neutral-900 dark:text-neutral-100 flex flex-col transition-colors selection:bg-amber-500/20 selection:text-amber-800 dark:selection:text-amber-200">
+    <div className="lyra-shell min-h-screen flex flex-col transition-colors selection:bg-amber-500/20">
       {/* Top Header */}
       <Header />
 
       {/* Main Content Area */}
-      <main className="flex-1 w-full max-w-3xl mx-auto px-4 sm:px-6">
+      <main className="flex-1 w-full max-w-4xl mx-auto px-4 sm:px-6">
         {activeSongId ? (
           <SongViewPlaceholder />
         ) : (

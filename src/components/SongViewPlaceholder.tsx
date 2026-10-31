@@ -114,7 +114,7 @@ export const SongViewPlaceholder: React.FC = () => {
       </div>
 
       {/* Clean Next-Step Placeholder Studio Workspace */}
-      <div className="p-8 sm:p-12 rounded-2xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900/60 text-center shadow-xs">
+      <div className="lyra-panel p-6 sm:p-12 text-center">
         <div className="w-12 h-12 mx-auto rounded-xl bg-amber-500/10 text-amber-600 dark:text-amber-400 flex items-center justify-center mb-4">
           <Music className="w-6 h-6" />
         </div>

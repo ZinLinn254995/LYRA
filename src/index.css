@@ -2,19 +2,73 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+@theme {
+  --font-sans: 'Plus Jakarta Sans', 'Noto Sans Myanmar', system-ui, -apple-system, sans-serif;
+  --color-brand: #c47b2b;
+  --color-brand-strong: #a85f17;
+  --radius-panel: 1rem;
+  --shadow-panel: 0 18px 48px -28px rgb(29 26 22 / 0.28);
+}
+
 @layer base {
   :root {
-    --font-sans: 'Plus Jakarta Sans', 'Noto Sans Myanmar', system-ui, -apple-system, sans-serif;
+    color-scheme: light;
+    --lyra-canvas: #f6f5f2;
+    --lyra-surface: #ffffff;
+    --lyra-surface-subtle: #efeee9;
+    --lyra-border: #e2e0d9;
+    --lyra-text: #25231f;
+    --lyra-muted: #716e67;
+  }
+
+  .dark {
+    color-scheme: dark;
+    --lyra-canvas: #171716;
+    --lyra-surface: #222220;
+    --lyra-surface-subtle: #2b2a27;
+    --lyra-border: #3a3935;
+    --lyra-text: #f4f1ea;
+    --lyra-muted: #aaa69d;
+  }
+
+  * {
+    border-color: var(--lyra-border);
   }
 
   body {
+    margin: 0;
+    background: var(--lyra-canvas);
+    color: var(--lyra-text);
     font-family: var(--font-sans);
     letter-spacing: -0.01em;
     -webkit-tap-highlight-color: transparent;
   }
 
-  /* Specific Burmese text styling for optimal line-height and rendering */
+  button, input {
+    font: inherit;
+  }
+
+  button:focus-visible, input:focus-visible {
+    outline: 2px solid #c47b2b;
+    outline-offset: 2px;
+  }
+
   [lang="my"] {
     line-height: 1.65;
   }
+}
+
+@layer components {
+  .lyra-shell { background: var(--lyra-canvas); color: var(--lyra-text); }
+  .lyra-header { background: color-mix(in srgb, var(--lyra-canvas) 88%, transparent); border-color: var(--lyra-border); }
+  .lyra-panel { background: var(--lyra-surface); border: 1px solid var(--lyra-border); border-radius: var(--radius-panel); box-shadow: var(--shadow-panel); }
+  .lyra-button-primary { background: var(--lyra-text); color: var(--lyra-canvas); border-radius: .75rem; }
+  .lyra-button-primary:hover { opacity: .88; }
+  .lyra-button-secondary { background: var(--lyra-surface); color: var(--lyra-text); border: 1px solid var(--lyra-border); border-radius: .75rem; }
+  .lyra-button-secondary:hover { background: var(--lyra-surface-subtle); }
+  .lyra-icon-button { min-width: 2.5rem; min-height: 2.5rem; display: inline-flex; align-items: center; justify-content: center; border: 1px solid var(--lyra-border); border-radius: .7rem; color: var(--lyra-muted); }
+  .lyra-icon-button:hover { color: var(--lyra-text); background: var(--lyra-surface-subtle); }
+  .lyra-input { width: 100%; border: 1px solid var(--lyra-border); border-radius: .7rem; background: var(--lyra-surface-subtle); color: var(--lyra-text); padding: .7rem .85rem; }
+  .lyra-input::placeholder { color: var(--lyra-muted); }
+  .lyra-input:focus { border-color: #c47b2b; box-shadow: 0 0 0 3px rgb(196 123 43 / .16); outline: none; }
 }
