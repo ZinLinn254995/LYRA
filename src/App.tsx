@@ -14,7 +14,7 @@ import { SongViewPlaceholder } from './components/SongViewPlaceholder';
 import { ExplorePage } from './components/ExplorePage';
 
 const HomeScreen: React.FC = () => {
-  const { activeSongId, t } = useApp();
+  const { activeSongId } = useApp();
   const [showExplore, setShowExplore] = useState(false);
 
   return (
@@ -29,13 +29,8 @@ const HomeScreen: React.FC = () => {
           ) : (
             <div className="w-full py-4 sm:py-6">
               <WelcomeSection />
-              <div className="flex flex-wrap items-center gap-2 mb-4">
-                <CreateSongButton />
-                <button type="button" onClick={() => setShowExplore(true)} className="lyra-button-secondary inline-flex items-center gap-2 px-4 py-3 text-sm font-semibold">
-                  {t('exploreLabel')}
-                </button>
-              </div>
-              <RecentSongsList />
+              <CreateSongButton />
+              <RecentSongsList onExplore={() => setShowExplore(true)} />
             </div>
           )}
         </main>
