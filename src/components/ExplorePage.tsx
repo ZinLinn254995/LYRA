@@ -104,15 +104,21 @@ const CellRow: React.FC<{ track: Track }> = ({ track }) => (
   <div className="grid grid-cols-[42px_minmax(0,1fr)] items-stretch border-b border-stone-200 last:border-b-0">
     <div className="flex items-center text-[9px] font-medium uppercase tracking-wide text-stone-400">{track.label}</div>
     <div className="grid grid-cols-8 min-w-0">
-      {track.cells.map((cell, index) => (
-        <div
-          key={index}
-          className={`min-w-0 min-h-7 flex items-center justify-center text-center border-l border-stone-100 text-[12px] sm:text-sm ${cell.className === 'note' ? 'font-semibold text-stone-900' : cell.className === 'duration' ? 'text-stone-500' : cell.className === 'annotation' ? 'text-[9px] text-stone-500' : 'text-stone-600'}`}
-          style={cell.span ? { gridColumn: `span ${cell.span}` } : undefined}
-        >
-          {cell.text || ''}
-        </div>
-      ))}
+      {track.cells.map((cell, index) => {
+        const covered = track.cells.slice(0, index).some((previous, previousIndex) =>
+          Boolean(previous.span && index < previousIndex + previous.span)
+        );
+        if (covered) return null;
+        return (
+          <div
+            key={index}
+            className={`min-w-0 min-h-7 flex items-center justify-center text-center border-l border-stone-100 text-[12px] sm:text-sm ${cell.className === 'note' ? 'font-semibold text-stone-900' : cell.className === 'duration' ? 'text-stone-500' : cell.className === 'annotation' ? 'text-[9px] text-stone-500' : 'text-stone-600'}`}
+            style={cell.span ? { gridColumn: `${index + 1} / span ${cell.span}` } : { gridColumn: String(index + 1) }}
+          >
+            {cell.text || ''}
+          </div>
+        );
+      })}
     </div>
   </div>
 );
