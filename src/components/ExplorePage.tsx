@@ -15,16 +15,16 @@ const masterSample: SampleBar[] = [
     number: 1, section: 'A · Theme',
     tracks: [
       { label: 'Chord', cells: [{ text: 'Cmaj7', span: 2 }, {}, { text: 'G/B', span: 2 }, {}, { text: 'Am7', span: 2 }, {}, { text: 'G7', span: 2 }] },
-      { label: 'Note', cells: [{ text: '1', className: 'note' }, { text: '2̇', className: 'note' }, { text: '3', className: 'note' }, { text: '♯4', className: 'note' }, { text: '5', className: 'note' }, { text: '6̣', className: 'note' }, { text: '5', className: 'note' }, { text: '3', className: 'note' }] },
+      { label: 'Jianpu', cells: [{ text: '1', className: 'note' }, { text: '2̇', className: 'note' }, { text: '3', className: 'note' }, { text: '♯4', className: 'note' }, { text: '5', className: 'note' }, { text: '6̣', className: 'note' }, { text: '5', className: 'note' }, { text: '3', className: 'note' }] },
       { label: 'Lyric', cells: [{ text: 'When' }, { text: 'the' }, { text: 'morn' }, { text: 'ing' }, { text: 'light' }, { text: 'is' }, { text: 'shin' }, { text: 'ing' }] },
     ],
-    marks: ['p', 'slur', 'breath']
+    marks: ['p', '⌒', 'breath']
   },
   {
     number: 2,
     tracks: [
       { label: 'Chord', cells: [{ text: 'Fmaj7', span: 2 }, {}, { text: 'C/E', span: 2 }, {}, { text: 'Dm7', span: 2 }, {}, { text: 'G7sus4', span: 2 }, {}] },
-      { label: 'Note', cells: [{ text: '4', className: 'note' }, { text: '5', className: 'note' }, { text: '6', className: 'note' }, { text: '5', className: 'note' }, { text: '4', className: 'note' }, { text: '3', className: 'note' }, { text: '2', className: 'note' }, { text: '1̇', className: 'note' }] },
+      { label: 'Jianpu', cells: [{ text: '4', className: 'note' }, { text: '5', className: 'note' }, { text: '6', className: 'note' }, { text: '5', className: 'note' }, { text: '4', className: 'note' }, { text: '3', className: 'note' }, { text: '2', className: 'note' }, { text: '1̇', className: 'note' }] },
       { label: 'Lyric', cells: [{ text: 'gen' }, { text: 'tle' }, { text: 'breez' }, { text: 'es' }, { text: 'car' }, { text: 'ry' }, { text: 'me' }, { text: 'home' }] },
     ],
     marks: ['crescendo', 'tie']
@@ -33,7 +33,7 @@ const masterSample: SampleBar[] = [
     number: 3,
     tracks: [
       { label: 'Chord', cells: [{ text: 'Am', span: 2 }, {}, { text: 'Am/G', span: 2 }, {}, { text: 'D/F♯', span: 2 }, {}, { text: 'Fmaj7', span: 2 }, {}] },
-      { label: 'Note', cells: [{ text: '6', className: 'note' }, { text: '6', className: 'note' }, { text: '5', className: 'note' }, { text: '—', className: 'duration' }, { text: '4·', className: 'note' }, { text: '3', className: 'note' }, { text: '2', className: 'note' }, { text: '0', className: 'note' }] },
+      { label: 'Jianpu', cells: [{ text: '6', className: 'note' }, { text: '6', className: 'note' }, { text: '5', className: 'note' }, { text: '—', className: 'duration' }, { text: '4·', className: 'note' }, { text: '3', className: 'note' }, { text: '2', className: 'note' }, { text: '0', className: 'note' }] },
       { label: 'Lyric', cells: [{ text: 'Through' }, { text: 'the' }, { text: 'qui' }, { text: 'et' }, { text: 'af' }, { text: 'ter' }, { text: 'noon' }, { text: '—' }] },
     ],
     marks: ['mp', 'staccato']
@@ -42,16 +42,16 @@ const masterSample: SampleBar[] = [
     number: 4,
     tracks: [
       { label: 'Chord', cells: [{ text: 'G7', span: 2 }, {}, { text: 'C', span: 2 }, {}, { text: 'C/E', span: 2 }, {}, { text: 'G7', span: 2 }, {}] },
-      { label: 'Note', cells: [{ text: '5', className: 'note' }, { text: '4', className: 'note' }, { text: '3', className: 'note' }, { text: '2', className: 'note' }, { text: '1', className: 'note' }, { text: '—', className: 'duration' }, { text: '1', className: 'note' }, { text: '—', className: 'duration' }] },
+      { label: 'Jianpu', cells: [{ text: '5', className: 'note' }, { text: '4', className: 'note' }, { text: '3', className: 'note' }, { text: '2', className: 'note' }, { text: '1', className: 'note' }, { text: '—', className: 'duration' }, { text: '1', className: 'note' }, { text: '—', className: 'duration' }] },
       { label: 'Lyric', cells: [{ text: 'ev' }, { text: 'ery' }, { text: 'thing' }, { text: 'feels' }, { text: 'like' }, { text: 'home' }, { text: 'to' }, { text: 'me' }] },
     ],
-    marks: ['rit.', 'fermata']
+    marks: ['rit.', '𝄐']
   },
   {
     number: 5, section: 'B · Contrast',
     tracks: [
       { label: 'Chord', cells: [{ text: 'F', span: 2 }, {}, { text: 'G/F', span: 2 }, {}, { text: 'Em7', span: 2 }, {}, { text: 'A7', span: 2 }, {}] },
-      { label: 'Note', cells: [{ text: '4', className: 'note' }, { text: '♭7', className: 'note' }, { text: '1̇', className: 'note' }, { text: '2̇', className: 'note' }, { text: '3̇', className: 'note' }, { text: '—', className: 'duration' }, { text: '♯4', className: 'note' }, { text: '5', className: 'note' }] },
+      { label: 'Jianpu', cells: [{ text: '4', className: 'note' }, { text: '♭7', className: 'note' }, { text: '1̇', className: 'note' }, { text: '2̇', className: 'note' }, { text: '3̇', className: 'note' }, { text: '—', className: 'duration' }, { text: '♯4', className: 'note' }, { text: '5', className: 'note' }] },
       { label: 'Lyric', cells: [{ text: 'Now' }, { text: 'the' }, { text: 'riv' }, { text: 'er' }, { text: 'turns' }, { text: 'and' }, { text: 'the' }, { text: 'sky' }] },
     ],
     marks: ['f', 'accent']
@@ -60,7 +60,7 @@ const masterSample: SampleBar[] = [
     number: 6,
     tracks: [
       { label: 'Chord', cells: [{ text: 'Dm7', span: 2 }, {}, { text: 'G7', span: 2 }, {}, { text: 'Cmaj7', span: 4 }, {}, {}, {}] },
-      { label: 'Note', cells: [{ text: '6', className: 'note' }, { text: '5', className: 'note' }, { text: '4', className: 'note' }, { text: '3', className: 'note' }, { text: '2', className: 'note' }, { text: '1', className: 'note' }, { text: '—', className: 'duration' }, { text: '—', className: 'duration' }] },
+      { label: 'Jianpu', cells: [{ text: '6', className: 'note' }, { text: '5', className: 'note' }, { text: '4', className: 'note' }, { text: '3', className: 'note' }, { text: '2', className: 'note' }, { text: '1', className: 'note' }, { text: '—', className: 'duration' }, { text: '—', className: 'duration' }] },
       { label: 'Lyric', cells: [{ text: 'opens' }, { text: 'wide' }, { text: 'be' }, { text: 'fore' }, { text: 'my' }, { text: 'eyes' }, { text: '—' }, { text: '—' }] },
     ],
     marks: ['dim.', 'tie']
@@ -69,7 +69,7 @@ const masterSample: SampleBar[] = [
     number: 7,
     tracks: [
       { label: 'Chord', cells: [{ text: 'C', span: 2 }, {}, { text: 'Am/C', span: 2 }, {}, { text: 'Dm7', span: 2 }, {}, { text: 'G7', span: 2 }, {}] },
-      { label: 'Note', cells: [{ text: '1', className: 'note' }, { text: '3', className: 'note' }, { text: '5', className: 'note' }, { text: '1̇', className: 'note' }, { text: '7', className: 'note' }, { text: '6', className: 'note' }, { text: '5', className: 'note' }, { text: '4', className: 'note' }] },
+      { label: 'Jianpu', cells: [{ text: '1', className: 'note' }, { text: '3', className: 'note' }, { text: '5', className: 'note' }, { text: '1̇', className: 'note' }, { text: '7', className: 'note' }, { text: '6', className: 'note' }, { text: '5', className: 'note' }, { text: '4', className: 'note' }] },
       { label: 'Lyric', cells: [{ text: 'Sing' }, { text: 'a' }, { text: 'lit' }, { text: 'tle' }, { text: 'song' }, { text: 'and' }, { text: 'let' }, { text: 'go' }] },
     ],
     marks: ['mf', 'slur']
@@ -78,7 +78,7 @@ const masterSample: SampleBar[] = [
     number: 8,
     tracks: [
       { label: 'Chord', cells: [{ text: 'C', span: 4 }, {}, {}, {}, { text: 'C', span: 4 }, {}, {}, {}] },
-      { label: 'Note', cells: [{ text: '1', className: 'note' }, { text: '—', className: 'duration' }, { text: '—', className: 'duration' }, { text: '—', className: 'duration' }, { text: '1', className: 'note' }, { text: '—', className: 'duration' }, { text: 'fermata', span: 2, className: 'annotation' }, {}] },
+      { label: 'Jianpu', cells: [{ text: '1', className: 'note' }, { text: '—', className: 'duration' }, { text: '—', className: 'duration' }, { text: '—', className: 'duration' }, { text: '1', className: 'note' }, { text: '—', className: 'duration' }, { text: '𝄐', span: 2, className: 'annotation' }, {}] },
       { label: 'Lyric', cells: [{ text: 'home', span: 4 }, {}, {}, {}, { text: '—', span: 4 }, {}, {}, {}] },
     ],
     marks: ['D.C. al Fine', 'Fine', 'double bar']
@@ -92,34 +92,40 @@ const notationLegend = [
   ['1̇ / 1̣', 'Higher / lower octave'],
   ['—', 'Extend the previous note'],
   ['·', 'Dotted duration'],
-  ['underline', 'Subdivision / shorter note values'],
-  ['⌒', 'Slur / tie between notes'],
-  ['𝄐', 'Fermata: hold the note'],
-  ['𝄆 𝄇', 'Repeat start / repeat end'],
-  ['p · mp · mf · f', 'Dynamics: soft to loud'],
+  ['Underlines', 'Shorter note values / subdivisions'],
+  ['⌒', 'Slur / tie'],
+  ['𝄐', 'Fermata'],
+  ['𝄆 𝄇', 'Repeat signs'],
+  ['p · mp · mf · f', 'Dynamics'],
   ['rit. · accel.', 'Gradually slower / faster'],
 ];
 
-const CellRow: React.FC<{ track: Track }> = ({ track }) => (
-  <div className="grid grid-cols-[42px_minmax(0,1fr)] items-stretch border-b border-stone-200 last:border-b-0">
-    <div className="flex items-center text-[9px] font-medium uppercase tracking-wide text-stone-400">{track.label}</div>
-    <div className="grid grid-cols-8 min-w-0">
-      {track.cells.map((cell, index) => {
-        const covered = track.cells.slice(0, index).some((previous, previousIndex) =>
-          Boolean(previous.span && index < previousIndex + previous.span)
-        );
-        if (covered) return null;
-        return (
-          <div
-            key={index}
-            className={`min-w-0 min-h-7 flex items-center justify-center text-center border-l border-stone-100 text-[12px] sm:text-sm ${cell.className === 'note' ? 'font-semibold text-stone-900' : cell.className === 'duration' ? 'text-stone-500' : cell.className === 'annotation' ? 'text-[9px] text-stone-500' : 'text-stone-600'}`}
-            style={cell.span ? { gridColumn: `${index + 1} / span ${cell.span}` } : { gridColumn: String(index + 1) }}
-          >
-            {cell.text || ''}
-          </div>
-        );
-      })}
+const ScoreBar: React.FC<{ bar: SampleBar; first: boolean; last: boolean }> = ({ bar, first, last }) => (
+  <div className={`relative min-w-0 ${first ? 'border-l-2 border-stone-700' : ''} ${last ? 'border-r-2 border-stone-700' : 'border-r border-stone-400'}`}>
+    {bar.section && <div className="absolute -top-5 left-1 text-[10px] font-semibold tracking-wide text-stone-600 whitespace-nowrap">{bar.section}</div>}
+    <div className="absolute -top-4 left-1 text-[9px] text-stone-400">{bar.number}</div>
+    <div className="grid grid-rows-[25px_38px_25px]">
+      {bar.tracks.map((track, rowIndex) => (
+        <div key={track.label} className={`grid grid-cols-8 min-w-0 items-center ${rowIndex === 0 ? '' : 'border-t border-stone-100'}`}>
+          {track.cells.map((cell, index) => {
+            const covered = track.cells.slice(0, index).some((previous, previousIndex) =>
+              Boolean(previous.span && index < previousIndex + previous.span)
+            );
+            if (covered) return null;
+            return (
+              <div
+                key={index}
+                className={`min-w-0 flex items-center justify-center text-center ${rowIndex === 0 ? 'text-[9px] sm:text-[10px] font-medium text-stone-700 self-start pt-1' : rowIndex === 1 ? 'text-[14px] sm:text-base font-semibold text-stone-900' : 'text-[9px] sm:text-[10px] text-stone-600'} ${cell.className === 'duration' ? 'text-stone-500' : ''}`}
+                style={cell.span ? { gridColumn: `${index + 1} / span ${cell.span}` } : { gridColumn: String(index + 1) }}
+              >
+                {cell.text || ''}
+              </div>
+            );
+          })}
+        </div>
+      ))}
     </div>
+    {bar.marks?.length ? <div className="absolute -bottom-4 left-1 flex gap-2 text-[8px] italic text-stone-500 whitespace-nowrap">{bar.marks.join(' · ')}</div> : null}
   </div>
 );
 
@@ -133,39 +139,33 @@ export const ExplorePage: React.FC<{ onBack: () => void }> = ({ onBack }) => (
     </div>
 
     <article className="mx-auto max-w-5xl bg-[#fffefa] text-stone-900 border border-stone-200 shadow-sm px-4 py-5 sm:px-8 sm:py-8">
-      <header className="text-center border-b-2 border-stone-800 pb-4 mb-4">
-        <div className="text-[9px] uppercase tracking-[0.28em] text-stone-500 mb-2">LYRA · Jianpu study score</div>
+      <header className="text-center border-b-2 border-stone-800 pb-4 mb-7">
+        <div className="text-[9px] uppercase tracking-[0.28em] text-stone-500 mb-2">LYRA · Jianpu score</div>
         <h1 className="font-serif text-2xl sm:text-3xl font-semibold tracking-wide">A Song for the Morning</h1>
-        <p className="text-xs sm:text-sm text-stone-600 mt-1">A complete notation reference sample</p>
+        <p className="text-xs sm:text-sm text-stone-600 mt-1">Jianpu melody with chord symbols and lyrics</p>
         <div className="flex flex-wrap justify-center gap-x-5 gap-y-1 text-[10px] sm:text-xs text-stone-600 mt-3">
-          <span>Composer: LYRA Sample</span><span>1=C</span><span>Key: C Major</span><span>4/4</span><span>♩ = 96 BPM</span>
+          <span>Composer: LYRA Sample</span><span>1=C</span><span>Key: C Major</span><span>4/4</span><span>♩ = 96</span>
         </div>
       </header>
 
-      <div className="flex flex-wrap items-center justify-between gap-2 border-b border-stone-300 pb-2 mb-3 text-[10px] sm:text-xs text-stone-600">
-        <span>Moderato · Sing gently</span><span>Concert pitch · Jianpu (Numbered Notation)</span>
+      <div className="flex flex-wrap items-center justify-between gap-2 border-b border-stone-300 pb-2 mb-7 text-[10px] sm:text-xs text-stone-600">
+        <span>Moderato · Sing gently</span><span>Concert pitch · Numbered notation</span>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-5 gap-y-4">
-        {masterSample.map((bar) => (
-          <section key={bar.number} className="relative border-b border-stone-300 pb-2">
-            {bar.section && <div className="text-[10px] font-semibold tracking-wide text-stone-600 mb-1">{bar.section}</div>}
-            <div className="flex items-center justify-between mb-1">
-              <span className="text-[9px] text-stone-400">BAR {bar.number}</span>
-              {bar.number === 1 && <span className="text-[10px] text-stone-500">♩ = 96</span>}
-              {bar.number === 5 && <span className="text-[10px] text-stone-500">f · più mosso</span>}
+      <div className="space-y-10">
+        {[masterSample.slice(0, 4), masterSample.slice(4, 8)].map((system, systemIndex) => (
+          <section key={systemIndex} className="pt-5">
+            <div className="grid grid-cols-4 gap-0 border-y border-stone-400 py-1">
+              {system.map((bar, index) => (
+                <ScoreBar key={bar.number} bar={bar} first={index === 0} last={index === system.length - 1} />
+              ))}
             </div>
-            <div className="border-y border-stone-300">
-              {bar.tracks.map((track) => <CellRow key={track.label} track={track} />)}
-            </div>
-            {bar.marks && <div className="flex flex-wrap gap-x-3 gap-y-1 mt-1 text-[9px] italic text-stone-500">{bar.marks.map((mark) => <span key={mark}>{mark}</span>)}</div>}
-            <div className="absolute right-0 top-0 bottom-0 border-r border-stone-400" />
           </section>
         ))}
       </div>
 
-      <div className="mt-5 pt-3 border-t-2 border-stone-800">
-        <h2 className="font-serif text-base font-semibold mb-2">Notation & performance guide</h2>
+      <div className="mt-9 pt-4 border-t-2 border-stone-800">
+        <h2 className="font-serif text-base font-semibold mb-3">Notation guide</h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-x-4 gap-y-2">
           {notationLegend.map(([symbol, meaning]) => (
             <div key={symbol} className="flex gap-2 items-start text-[10px] sm:text-[11px]">
@@ -180,6 +180,6 @@ export const ExplorePage: React.FC<{ onBack: () => void }> = ({ onBack }) => (
         </div>
       </div>
     </article>
-    <p className="text-center text-xs text-neutral-500 mt-3">Master sample preview · Editor conversion will be added after this sheet is approved.</p>
+    <p className="text-center text-xs text-neutral-500 mt-3">Master sample preview · Continuous printed-score layout</p>
   </main>
 );
