@@ -1,0 +1,6 @@
+{
+  "name": "LYRA",
+  "description": "Music Notation & Composition Studio. Write Music. Shape Ideas. Simple and modern Jianpu numbered musical notation.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
