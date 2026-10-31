@@ -76,7 +76,7 @@ export const CreateSongModal: React.FC = () => {
               value={title}
               onChange={(e) => setTitle(e.target.value)}
               placeholder={t('defaultTitle')}
-              className="w-full px-3.5 py-2.5 rounded-xl border border-neutral-300 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800/60 text-neutral-900 dark:text-neutral-100 text-sm focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all placeholder:text-neutral-400"
+              className="lyra-input text-sm transition-all"
             />
           </div>
 
