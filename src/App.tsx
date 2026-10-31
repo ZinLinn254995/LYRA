@@ -14,7 +14,7 @@ import { SongViewPlaceholder } from './components/SongViewPlaceholder';
 import { ExplorePage } from './components/ExplorePage';
 
 const HomeScreen: React.FC = () => {
-  const { activeSongId, createSong, updateSong } = useApp();
+  const { activeSongId } = useApp();
   const [showExplore, setShowExplore] = useState(false);
 
   return (
